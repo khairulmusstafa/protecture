@@ -29,7 +29,7 @@ const DonationValidation = ({
 
     try {
       const response = await axios.post(
-        "http://localhost:8800/api/donations/648f242dcacb7f194a8f8451/donate",
+        "https://protecture-api.vercel.app/api/donations/648f242dcacb7f194a8f8451/donate",
         donationData
       );
       const script = document.createElement("script");
@@ -49,7 +49,7 @@ const DonationValidation = ({
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8800/api/donations/userDonations/${userDonations._id}`
+        `https://protecture-api.vercel.app/api/donations/userDonations/${userDonations._id}`
       );
       setUserDonations(response.data);
 

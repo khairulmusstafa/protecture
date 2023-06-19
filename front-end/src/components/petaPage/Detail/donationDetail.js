@@ -28,7 +28,7 @@ const DonationDetail = ({
       try {
         if (showDonationDetail.user) {
           const response = await axios.get(
-            `http://localhost:8800/api/users/${showDonationDetail.user}`
+            `https://protecture-api.vercel.app/api/users/${showDonationDetail.user}`
           );
           console.log(response);
           const user = response.data;

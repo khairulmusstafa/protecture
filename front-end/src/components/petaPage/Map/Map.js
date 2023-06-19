@@ -18,7 +18,7 @@ const Maps = () => {
   React.useEffect(() => {
     const getPins = async () => {
       try {
-        const res = await axios.get("http://localhost:8800/api/pins");
+        const res = await axios.get("https://protecture-api.vercel.app/api/pins");
         setPins(res.data);
       } catch (err) {
         console.log(err);
@@ -52,7 +52,7 @@ const Maps = () => {
     console.log(newPin);
 
     try {
-      const res = await axios.post("http://localhost:8800/api/pins/", newPin); // Make a POST request to the specified API endpoint
+      const res = await axios.post("https://protecture-api.vercel.app/api/pins/", newPin); // Make a POST request to the specified API endpoint
       setPins([...pins, res.data]);
       setNewPlace(null);
     } catch (err) {

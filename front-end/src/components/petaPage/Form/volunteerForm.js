@@ -20,7 +20,7 @@ const VolunteerForm = ({ showVolunteerForm, setShowVolunteerForm, data }) => {
 
     try {
       const response = await fetch(
-        `http://localhost:8800/api/volunteer/${showVolunteerForm._id}/volunteer`,
+        `https://protecture-api.vercel.app/api/volunteer/${showVolunteerForm._id}/volunteer`,
         {
           method: "PUT",
           headers: {

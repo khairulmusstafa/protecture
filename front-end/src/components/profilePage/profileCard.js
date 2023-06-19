@@ -37,7 +37,7 @@ const ProfileCard = ({ showEditProfile, setShowEditProfileForm, data }) => {
     try {
       if (userData) {
         const response = await axios.get(
-          `http://localhost:8800/api/users/${userData}`
+          `https://protecture-api.vercel.app/api/users/${userData}`
         );
         const user = response.data;
         setUser(user);
@@ -56,7 +56,7 @@ const ProfileCard = ({ showEditProfile, setShowEditProfileForm, data }) => {
   const getAllLaporan = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8800/api/pins/user/${userData}`
+        `https://protecture-api.vercel.app/api/pins/user/${userData}`
       );
       const data = response.data;
       setLaporanData(data);
@@ -68,7 +68,7 @@ const ProfileCard = ({ showEditProfile, setShowEditProfileForm, data }) => {
   const getAllVolunteer = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8800/api/volunteer/registered-by/${userData}`
+        `https://protecture-api.vercel.app/api/volunteer/registered-by/${userData}`
       );
 
       const data = response.data;
@@ -81,7 +81,7 @@ const ProfileCard = ({ showEditProfile, setShowEditProfileForm, data }) => {
   const getAllUserDonations = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:8800/api/donations/userDonations/user/${userData}`
+        `https://protecture-api.vercel.app/api/donations/userDonations/user/${userData}`
       );
       const data = response.data;
       setUserDonationData(data);

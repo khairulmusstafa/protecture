@@ -44,7 +44,7 @@ const VolunteerDetail = ({
       try {
         if (showVolunteerDetail.user) {
           const response = await axios.get(
-            `http://localhost:8800/api/users/${showVolunteerDetail.user}`
+            `https://protecture-api.vercel.app/api/users/${showVolunteerDetail.user}`
           );
           console.log(response);
           const user = response.data;

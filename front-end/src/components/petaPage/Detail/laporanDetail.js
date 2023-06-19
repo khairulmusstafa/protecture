@@ -18,7 +18,7 @@ const LaporanDetail = ({ showLaporanDetail, setShowLaporanDetail, showLaporanUpd
       try {
         if (showLaporanDetail.user) {
           const response = await axios.get(
-            `http://localhost:8800/api/users/${showLaporanDetail.user}`
+            `https://protecture-api.vercel.app/api/users/${showLaporanDetail.user}`
           );
           const user = response.data;
           setUserName(user.username);

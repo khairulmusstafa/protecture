@@ -21,7 +21,7 @@ const RegisterPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8800/api/users/register",
+        "https://protecture-api.vercel.app/api/users/register",
         userData
       );
 
