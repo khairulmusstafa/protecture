@@ -44,7 +44,7 @@ function Sidebar({ isOpen }) {
 
   const getAllLaporan = async () => {
     try {
-      const response = await axios.get("http://localhost:8800/api/pins");
+      const response = await axios.get("https://protecture-api.vercel.app/api/pins");
       const data = response.data;
       setLaporanData(data);
     } catch (error) {
@@ -54,7 +54,7 @@ function Sidebar({ isOpen }) {
 
   const getAllVolunteer = async () => {
     try {
-      const response = await axios.get("http://localhost:8800/api/volunteer/");
+      const response = await axios.get("https://protecture-api.vercel.app/api/volunteer/");
 
       const data = response.data;
       console.log(data);
@@ -66,7 +66,7 @@ function Sidebar({ isOpen }) {
 
   const getAllDonations = async () => {
     try {
-      const response = await axios.get("http://localhost:8800/api/donations");
+      const response = await axios.get("https://protecture-api.vercel.app/api/donations");
       const data = response.data;
       setDonationData(data);
     } catch (error) {
