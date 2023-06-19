@@ -1,10 +1,14 @@
 import * as React from "react";
 import Map, { Marker, Popup } from "react-map-gl";
 import * as Icons from "react-bootstrap-icons";
+import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 import axios from "axios";
 import TimeAgo from "timeago-react";
 import { AuthContext } from "../../../utils/useAuth";
+
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 
 const Maps = () => {
   const { userData } = React.useContext(AuthContext);
